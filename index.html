@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>yang-demo11</title>
-  </head>
-  <body>
-    <div id="app">222222</div>
+</head>
+
+<body>
+    <div id="app">
+        <main-page></main-page>
+    </div>
     <!-- built files will be auto injected -->
-  </body>
+</body>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    // 使用httpVueLoader
+    Vue.use(httpVueLoader);
+    new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                visible: false
+            }
+        },
+        components: {
+            // 将组建加入组建库
+            'main-page': 'url:/src/components/mainpage.vue'
+        }
+    })
+</script>
+
 </html>
