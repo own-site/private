@@ -4,17 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <!-- 先引入 Vue -->
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <!-- 引入 http-vue-loader -->
-    <script src="https://unpkg.com/http-vue-loader"></script>
     <title>yang-demo11</title>
 </head>
 
 <body>
     <div id="app">
-      测试
         <main-page></main-page>
     </div>
     <!-- built files will be auto injected -->
@@ -22,7 +16,7 @@
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script>
     // 使用httpVueLoader
-    Vue.use(httpVueLoader);
+    // Vue.use(httpVueLoader);
     new Vue({
         el: '#app',
         data: function() {
@@ -32,7 +26,8 @@
         },
         components: {
             // 将组建加入组建库
-            'main-page': 'url:/src/components/mainpage.vue'
+            'main-page': httpVueLoader('src/components/mainpage.vue'),
+            // 'main-page': 'url:/src/components/mainpage.vue'
         }
     })
 </script>
