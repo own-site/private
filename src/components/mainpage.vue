@@ -1,4 +1,5 @@
 <template>
+  <div class='main-page'>
   <el-form :inline="true" :model="formInline" class="demo-form-inline">
   <el-form-item label="用户编码">
     <el-input v-model="formInline.userCode" placeholder="用户编码"></el-input>
@@ -19,9 +20,10 @@
     <el-button type="primary" @click="reset">重置</el-button>
   </el-form-item>
   </el-form>
+</div>
 </template>
 <script>
-  export default {
+module.exports = {
     data() {
       return {
         formInline: {
