@@ -1,5 +1,8 @@
 <template>
   <div class='main-page'>
+  <div class='kaimo-info'>
+        {{msg}}
+    </div>
   <el-form :inline="true" :model="formInline" class="demo-form-inline">
   <el-form-item label="用户编码">
     <el-input v-model="formInline.userCode" placeholder="用户编码"></el-input>
@@ -26,6 +29,7 @@
 module.exports = {
     data() {
       return {
+        msg: "hello http-vue-loader --- kaimo"
         formInline: {
           userCode: '',
           userName: '',
